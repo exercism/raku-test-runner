@@ -1,5 +1,5 @@
 {
   "version": 1,
   "status": "fail",
-  "message": "1..9\n# Subtest: year not divisible by 4 in common year\n    1..2\n\u001b[01;31m\u001b[KBail out! Built-in `is-leap-year` method is not allowed for this exercise.\u001b[m\u001b[K\n/solution/leap.rakutest .. Dubious, test returned 255\nAll 9 subtests passed \nAll tests successful.\n\nTest Summary Report\n-------------------\n/solution/leap.rakutest (Wstat: 65280 Tests: 0 Failed: 0)\nNon-zero exit status: 255\n  Parse errors: Bad plan.  You planned 9 tests but ran 0.\nFiles=1, Tests=0,  \nResult: FAILED"
+  "message": "\u001b[01;31m\u001b[KBailout called.  Further testing stopped:  Built-in `is-leap-year` method is not allowed for this exercise.\u001b[m\u001b[K\nFAILED--Further testing stopped: Built-in `is-leap-year` method is not allowed for this exercise."
 }
