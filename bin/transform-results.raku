@@ -21,7 +21,7 @@ for from-json($*IN.slurp).List -> @part {
         when 'assert' {
             %results<tests>.push({
                 :name(@part[1]<name>),
-                ($output ?? :$output !! Empty),
+                ($output ?? ( $output.chars <= 500 ?? :$output !! :output($output.substr(0, 500) ~ '... Output was truncated. Please limit to 500 chars.') ) !! Empty),
                 :status(@part[1]<ok> ?? 'pass' !! 'fail' ),
             });
             $output = '';
