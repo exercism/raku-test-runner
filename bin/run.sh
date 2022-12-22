@@ -33,6 +33,7 @@ echo "${slug}: testing..."
 
 # Run the tests and transform to results
 chmod +x "${input_dir}/${slug}.rakutest"
+export HOME='/tmp'
 "${input_dir}/${slug}.rakutest" 2>&1 | tap-parser -j 0 | bin/transform-results.raku > ${results_file}
 
 echo "${slug}: done"
