@@ -64,7 +64,11 @@ for from-json($tap-results.IO.slurp).List -> @part {
         }
 
         when 'complete' {
-            if @part[1]<plan><skipAll> {
+            if @part[1]<count> != (@part[1]<plan><end> // -1) {
+                %results<tests>[$i]<message> = $output;
+                %results<status> = 'fail';
+            }
+            elsif @part[1]<plan><skipAll> {
                 %results<status>  = 'error';
                 %results<message> = $output;
             }
