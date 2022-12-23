@@ -32,7 +32,6 @@ mkdir -p "${output_dir}"
 echo "${slug}: testing..."
 
 # Run the tests and transform to results
-
 test_file="${input_dir}/${slug}.rakutest"
 chmod +x $test_file
 export HOME='/tmp'
