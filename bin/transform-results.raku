@@ -12,7 +12,7 @@ my Str:D  $output = '';
 my Bool:D $take   = False;
 my Str:D  @case;
 my Str    $case-id;
-my Str    $task_id;
+my Int    $task_id;
 
 my %results = :status<error>, :message(Nil), :version(3), :tests([]);
 
@@ -20,7 +20,7 @@ for $test-file.IO.lines(:!chomp) -> $line {
     if $line ~~ /:r :!s '# ' ['begin' || 'case'] ': ' (\S+) [\s+ 'task: ' (\d+)]? / {
         $take    = True;
         $case-id = $/[0].Str;
-        $task_id = .Str with $/[1] or '';
+        $task_id = .Int with $/[1];
     }
 
     if $take {
