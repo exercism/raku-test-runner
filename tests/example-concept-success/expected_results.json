@@ -1,0 +1,70 @@
+{
+  "message": null,
+  "status": "fail",
+  "tests": [
+    {
+      "message": "# Failed test 'expected minutes in oven'\n# at /solution/t/leap.rakutest line 6\n# expected: 40\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "expected minutes in oven",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 1,
+      "test_code": "cmp-ok(\n    EXPECTED-MINUTES-IN-OVEN,\n    '==',\n    40,\n    'expected minutes in oven',\n);"
+    },
+    {
+      "message": "# Failed test 'some remaining minutes in oven'\n# at /solution/t/leap.rakutest line 13\n# expected: 15\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "some remaining minutes in oven",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 2,
+      "test_code": "cmp-ok(\n    remaining-minutes-in-oven(25),\n    '==',\n    15,\n    'some remaining minutes in oven',\n);"
+    },
+    {
+      "name": "no more remaining minutes in oven",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "pass",
+      "task_id": 2,
+      "test_code": "cmp-ok(\n    remaining-minutes-in-oven(40),\n    '==',\n    0,\n    'no more remaining minutes in oven',\n);"
+    },
+    {
+      "message": "# Failed test 'preparation time in minutes for one layer'\n# at /solution/t/leap.rakutest line 27\n# expected: 2\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "preparation time in minutes for one layer",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 3,
+      "test_code": "cmp-ok(\n    preparation-time-in-minutes(1),\n    '==',\n    2,\n    'preparation time in minutes for one layer',\n);"
+    },
+    {
+      "message": "# Failed test 'preparation time in minutes for multiple layers'\n# at /solution/t/leap.rakutest line 34\n# expected: 8\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "preparation time in minutes for multiple layers",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 3,
+      "test_code": "cmp-ok(\n    preparation-time-in-minutes(4),\n    '==',\n    8,\n    'preparation time in minutes for multiple layers',\n);"
+    },
+    {
+      "message": "# Failed test 'total time in minutes for one layer'\n# at /solution/t/leap.rakutest line 41\n# expected: 32\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "total time in minutes for one layer",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 4,
+      "test_code": "cmp-ok(\n    total-time-in-minutes( 1, 30 ),\n    '==',\n    32,\n    'total time in minutes for one layer',\n);"
+    },
+    {
+      "message": "# Failed test 'total time in minutes for multiple layers'\n# at /solution/t/leap.rakutest line 48\n# expected: 16\n#  matcher: 'infix:<==>'\n#      got: Nil\n",
+      "name": "total time in minutes for multiple layers",
+      "output": "Use of Nil in numeric context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 4,
+      "test_code": "cmp-ok(\n    total-time-in-minutes( 4, 8 ),\n    '==',\n    16,\n    'total time in minutes for multiple layers',\n);"
+    },
+    {
+      "message": "# Failed test 'notification message'\n# at /solution/t/leap.rakutest line 55\n# expected: \"Ding!\"\n#  matcher: 'infix:<eq>'\n#      got: Nil\n# You failed 7 tests of 8\n",
+      "name": "notification message",
+      "output": "Use of Nil in string context\n  in block  at /usr/share/perl6/core/sources/2F6A62FBA1867516D8D516DB251DACD72C39C8E5 (Test) line 269\n",
+      "status": "fail",
+      "task_id": 5,
+      "test_code": "cmp-ok(\n    oven-alarm(),\n    'eq',\n    'Ding!',\n    'notification message',\n);"
+    }
+  ],
+  "version": 3
+}
