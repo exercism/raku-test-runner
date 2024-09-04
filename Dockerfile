@@ -1,4 +1,4 @@
-FROM rakudo-star:2024.07-alpine
+FROM rakudo-star:2024.08-alpine
 
 RUN apk add --no-cache bash jq coreutils nodejs npm
 
