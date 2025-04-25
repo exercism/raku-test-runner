@@ -1,5 +1,5 @@
 {
-  "message": "\u001b[31m===\u001b[0mSORRY!\u001b[31m===\u001b[0m Error while compiling /solution/leap.rakutest\n\u001b[31m===\u001b[0mSORRY!\u001b[31m===\u001b[0m Error while compiling /solution/Leap.rakumod (Leap)\nTwo terms in a row\nat /solution/Leap.rakumod (Leap):1\n------> \u001b[32muniTTT mod\u001b[33m⏏\u001b[31m@#le Leap\u001b[0m\n    expecting any of:\n        infix\n        infix stopper\n        postfix\n        statement end\n        statement modifier\n        statement modifier loop\nat /solution/leap.rakutest:4\n",
+  "message": "===SORRY!=== Error while compiling /solution/leap.rakutest\n===SORRY!=== Error while compiling /solution/Leap.rakumod (Leap)\nTwo terms in a row\nat /solution/Leap.rakumod (Leap):1\n------> uniTTT mod<HERE>@#le Leap\n    expecting any of:\n        infix\n        infix stopper\n        postfix\n        statement end\n        statement modifier\n        statement modifier loop\nat /solution/leap.rakutest:4\n",
   "status": "error",
   "tests": [
     {
