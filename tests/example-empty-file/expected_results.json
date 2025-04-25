@@ -1,5 +1,5 @@
 {
-  "message": "\u001b[31m===\u001b[0mSORRY!\u001b[31m===\u001b[0m Error while compiling /solution/leap.rakutest\nUndeclared routine:\n    is-leap-year used at lines 13, 20, 27, 34, 41, 48, 55, 62, 69\n",
+  "message": "===SORRY!=== Error while compiling /solution/leap.rakutest\nUndeclared routine:\n    is-leap-year used at lines 13, 20, 27, 34, 41, 48, 55, 62, 69\n",
   "status": "error",
   "tests": [
     {
