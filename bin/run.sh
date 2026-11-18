@@ -39,7 +39,12 @@ else
 fi
 chmod +x $test_file
 export HOME='/tmp'
-raku -I "${input_dir}/lib" $test_file 2>&1 | tap-parser -j 0 > "${output_dir}/tap.json"
-bin/transform-results.raku --tap-results="${output_dir}/tap.json" --output-file="${results_file}" --test-file=$test_file
+# The transform script reads the parsed TAP from the pipe, so it starts at the
+# same time as the tests. Its own start-up (loading Raku, its modules and the
+# test file) then happens while the tests run, instead of after them.
+raku -I "${input_dir}/lib" $test_file 2>&1 \
+    | tap-parser -j 0 \
+    | tee "${output_dir}/tap.json" \
+    | bin/transform-results.raku --tap-results=- --output-file="${results_file}" --test-file=$test_file
 
 echo "${slug}: done"

@@ -41,7 +41,9 @@ sub transform-results (
 
     my UInt:D $i = 0;
     my Str:D  $subtest = '';
-    for from-json($tap-results.IO.slurp).List -> @part {
+    # A path of '-' reads the parsed TAP from standard input.
+    my $tap-json = $tap-results eq '-' ?? $*IN.slurp !! $tap-results.IO.slurp;
+    for from-json($tap-json).List -> @part {
         given @part[0] {
             when 'comment' {
                 if %results<tests>[$i-1]<status> eq 'fail' {
