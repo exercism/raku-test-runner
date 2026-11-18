@@ -1,3 +1,4 @@
 tests/**/results.json
 tests/**/tap.json
 tests/**/.precomp/
+lib/.precomp/
